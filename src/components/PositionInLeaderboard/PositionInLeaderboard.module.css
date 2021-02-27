@@ -1,0 +1,74 @@
+.personContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: .25rem;
+    margin-top: 1.25rem;
+}
+
+.personContainer > div {
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+}
+
+.personContainer > div:first-child {
+    display: grid;
+    place-items: center;
+    font-size: 1.725rem;
+    color: var(--text);
+
+}
+
+.playerInformations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+}
+
+.playerInformations > div {
+    display: flex;
+}
+
+.playerInformations > div:first-child {
+    justify-content: flex-start;
+}
+
+.playerInformations > div:last-child {
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+.profileContainer {
+    display: flex;
+    align-items: center;
+}
+
+.profileContainer > img {
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+}
+
+.profileContainer > div {
+    margin-left: 1rem;
+}
+
+.profileContainer div strong {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--title);
+}
+
+.profileContainer div p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.profileContainer div p img {
+    margin-right: 0.25rem;
+}

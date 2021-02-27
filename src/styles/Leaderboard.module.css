@@ -1,0 +1,51 @@
+.container {
+    height: 100vh;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container header {
+    
+}
+
+.titles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+}
+
+.titles div:first-child {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.titles div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6rem;
+    padding-right: 1rem;
+}
+
+.titles h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--title);
+}
+
+.titles span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+/* 
+.main {
+    display: grid;
+    grid-template-columns: 5rem 2fr 1fr 1fr;
+} */
