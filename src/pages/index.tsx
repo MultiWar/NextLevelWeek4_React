@@ -45,13 +45,25 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const {level, currentExperience, completedChallenges} = ctx.req.cookies
+  // const session = await getSession(ctx)
+  
+  // if (!session) {
+  //   return {
+  //     redirect: {
+  //       permanent: false,
+  //       destination: '/login'
+  //     }
+  //   }
+  // }
 
+  const {level, currentExperience, completedChallenges} = ctx.req.cookies
+  
   return {
     props: {
       level: Number(level),
       currentExperience: Number(currentExperience),
-      completedChallenges: Number(completedChallenges)
+      completedChallenges: Number(completedChallenges),
+      // session
     }
   }
 }

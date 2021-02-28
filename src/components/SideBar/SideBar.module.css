@@ -24,7 +24,7 @@
     height: 60px;
     display: grid;
     place-items: center;
-
+    cursor: pointer;
 }
 
 .centeredDiv > div:first-child {

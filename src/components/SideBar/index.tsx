@@ -6,9 +6,9 @@ import styles from './SideBar.module.css'
 export const SideBar = () => {
     const router = useRouter()
 
-    const [isActive, setIsActive] = useState(router.pathname !== '/' ? router.pathname : 'home')
-    const [homeSvg, setHomeSvg] = useState('home_blue')
-    const [leaderboardSvg, setLeaderboardSvg] = useState('award')
+    const [isActive, setIsActive] = useState(router.pathname === '/' ? 'home' : 'leaderboard')
+    const [homeSvg, setHomeSvg] = useState(router.pathname === '/' ? 'home_blue' : 'home')
+    const [leaderboardSvg, setLeaderboardSvg] = useState(router.pathname === '/leaderboard' ? 'award_blue' : 'award')
     
     function goToHome() {
         router.push('/')
@@ -38,11 +38,11 @@ export const SideBar = () => {
                 <div className={styles.centeredDiv}>
                     <div onClick={() => goToHome()}>
                         {isActive === 'home' && (<motion.div className={styles.isActiveDiv} layoutId='isActiveDiv' />)}
-                        <img src={`/icons/${homeSvg}.svg`} />
+                        <motion.img src={`/icons/${homeSvg}.svg`} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} />
                     </div>
                     <div onClick={() => goToLeaderboard()}>
                         {isActive === 'leaderboard' && (<motion.div className={styles.isActiveDiv} layoutId='isActiveDiv' />)}
-                        <img src={`/icons/${leaderboardSvg}.svg`} />
+                        <motion.img src={`/icons/${leaderboardSvg}.svg`} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} />
                     </div>
                 </div>
             </AnimateSharedLayout>

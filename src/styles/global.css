@@ -10,6 +10,7 @@
     --blue: #5965e0;
     --dark-blue: #4953b8;
     --twitter-blue: #2aa9e0;
+    --grid: 5rem repeat(8, 1fr) 3rem;
 }
 
 * {

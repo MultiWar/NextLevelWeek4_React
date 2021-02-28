@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next'
 import { PositionInLeaderboard } from '../components/PositionInLeaderboard'
 import { ChallengesProvider } from '../Contexts/ChallengesContext'
+import Head from 'next/head'
 import styles from '../styles/Leaderboard.module.css'
 
 interface LeaderboardProps {
@@ -16,21 +17,27 @@ export default function Leaderboard(props: LeaderboardProps) {
             currentExperience={props.currentExperience}
             completedChallenges={props.completedChallenges}
         >
+            <Head>
+                <title>Leaderboard | MoveIt</title>
+            </Head>
             <div className={styles.container}>
                 <header>
                     <h1>Leaderboard</h1>
                     <div className={styles.titles}>
-                        <div>
+                        {/* <div> */}
                             <span>POSIÇÃO</span>
                             <span>USUÁRIO</span>
-                        </div>
-                        <div>
+                        {/* </div>
+                        <div> */}
                             <span>DESAFIOS</span>
                             <span>EXPERIÊNCIA</span>
-                        </div>
+                        {/* </div> */}
                     </div>
                 </header>
                 <main className={styles.main}>
+                    <PositionInLeaderboard />
+                    <PositionInLeaderboard />
+                    <PositionInLeaderboard />
                     <PositionInLeaderboard />
                 </main>
             </div>

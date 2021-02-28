@@ -8,7 +8,7 @@ export const PositionInLeaderboard = () => {
         <div className={styles.personContainer}>
             <div>1</div>
             <div className={styles.playerInformations}>
-                <div>
+                {/* <div> */}
                     <div className={styles.profileContainer}>
                         <img src='https://github.com/multiwar.png' alt='eu' />
                         <div>
@@ -19,15 +19,15 @@ export const PositionInLeaderboard = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div>
-                        <span>{completedChallenges}</span> completados
-                    </div>
-                    <div>
-                        <span>{currentExperience}</span> xp
-                    </div>
-                </div>
+                {/* </div> */}
+                {/* <div> */}
+                    {/* <div> */}
+                        <p className={styles.challenges}><span>{completedChallenges}</span> completos </p>
+                    {/* </div> */}
+                    {/* <div> */}
+                        <p className={styles.experience}><span>{currentExperience}</span> xp </p>
+                    {/* </div> */}
+                {/* </div> */}
             </div>
         </div>
     )
